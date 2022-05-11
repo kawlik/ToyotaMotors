@@ -1,0 +1,47 @@
+[
+	{
+		"position": "A0",
+		"valueMax": 50,
+		"valueNow": 45
+	},
+	{
+		"position": "A1",
+		"valueMax": 50,
+		"valueNow": 25
+	},
+	{
+		"position": "A2",
+		"valueMax": 50,
+		"valueNow": 30
+	},
+	{
+		"position": "A3",
+		"valueMax": 50,
+		"valueNow": 15
+	},
+	{
+		"position": "B0",
+		"valueMax": 50,
+		"valueNow": 20
+	},
+	{
+		"position": "B0",
+		"valueMax": 50,
+		"valueNow": 45
+	},
+	{
+		"position": "C0",
+		"valueMax": 30,
+		"valueNow": 15
+	},
+	{
+		"position": "C1",
+		"valueMax": 30,
+		"valueNow": 20
+	},
+	{
+		"position": "C2",
+		"valueMax": 30,
+		"valueNow": 29
+	}
+]

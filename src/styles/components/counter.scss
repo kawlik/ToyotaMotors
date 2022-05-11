@@ -1,0 +1,33 @@
+div.app-counter {
+
+	.card {
+		
+		transition: all ease .2s;
+
+		&:hover {
+
+			transform: scale( .95 );
+		}
+	}
+
+	.card-header {
+		
+		gap: 5px;
+
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: row;
+	
+		justify-content: flex-start;
+		align-content: center;
+		align-items: center;
+	
+		.status {
+	
+			width: .5rem;
+			height: .5rem;
+	
+			animation-duration: 1s;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+article.app-counters {
+
+	flex-grow: 1;
+	gap: 10px;
+	
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+
+	justify-content: flex-start;
+	align-content: stretch;
+	align-items: stretch;
+
+	section {
+		
+		flex-grow: 1;
+		flex-basis: 40%;
+
+		min-width: 320px;
+		padding: 10px;
+
+		.list {
+
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+
+			justify-content: flex-start;
+			align-content: stretch;
+			align-items: stretch;
+		}
+	}
+}

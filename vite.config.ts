@@ -43,7 +43,7 @@ export default defineConfig({
 				theme_color: '#ffffff',
 				background_color: '#ffffff',
 
-				description: 'TOYOTA',
+				description: 'TOYOTA MOTORS - work optimization of the type 3 employee.',
 
 				icons: [
 					{
@@ -61,6 +61,24 @@ export default defineConfig({
 						sizes: '512x512',
 						type: 'image/png',
 						purpose: 'any maskable',
+					},
+				],
+
+                screenshots: [
+					{
+						src: 'screenshot-01.jpg',
+						sizes: '1080x2340',
+						type: 'image/jpg',
+					},
+					{
+						src: 'screenshot-02.jpg',
+						sizes: '1080x2340',
+						type: 'image/jpg',
+					},
+					{
+						src: 'screenshot-03.jpg',
+						sizes: '1080x2340',
+						type: 'image/jpg',
 					},
 				],
 			},

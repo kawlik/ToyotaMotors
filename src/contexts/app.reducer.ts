@@ -15,9 +15,9 @@ export function AppReducer( state: AppState, dispatch: {
 	switch (action) {
 
 		case AppActions.UPDATE:
-			return { ...payload };
+			return payload;
 
 		default:
-			return { ...state };
+			return state;
 	}
 }

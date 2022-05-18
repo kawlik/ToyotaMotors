@@ -26,8 +26,18 @@ export default function AppProvider( prop: {
 		isOnline: false,
 		interval: 2000,
 		counters: [],
+        config: {
+            valueStop: 1,
+            valueWarn: 5,
+            style: {
+                'normal': 'primary',
+                'urgent': 'warning',
+                'stoped': 'danger',
+            }
+        }
 	});
 
+    
 	//	chrone updates
 	useEffect(() => {
 		

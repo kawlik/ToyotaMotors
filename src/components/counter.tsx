@@ -1,5 +1,8 @@
+import { useAppContext } from '../contexts/app.context';
+
+
 /*	Component Logic
-/*	*	*	*	*	*	*	*	*	*	*/
+/*  *	*	*	*	*	*	*	*	*	*/
 export default function Counter( prop: {
 	data: {
 		valueMax: number,
@@ -8,12 +11,15 @@ export default function Counter( prop: {
 	}
 }) {
 
+    //  get context state
+    const { state } = useAppContext();
+
     //  set counter stage
     const stage = (() => {
 
         //  test stages
-        if( prop.data.valueMax - prop.data.valueNow <= 1 ) return 'stoped';
-        if( prop.data.valueMax - prop.data.valueNow <= 5 ) return 'urgent';
+        if( prop.data.valueMax - prop.data.valueNow <= state.config.valueStop ) return 'stoped';
+        if( prop.data.valueMax - prop.data.valueNow <= state.config.valueWarn ) return 'urgent';
 
         //  default stage
         return 'normal';
@@ -25,11 +31,11 @@ export default function Counter( prop: {
     const style = ( property: 'bg'|'border'|'text' ) => {
 
         //  test stages
-        if( stage === 'stoped' ) return property + '-danger';
-        if( stage === 'urgent' ) return property + '-warning';
+        if( stage === 'stoped' ) return property + '-' + state.config.style['stoped'];
+        if( stage === 'urgent' ) return property + '-' + state.config.style['urgent'];
 
         //  default style
-        return property + '-primary';
+        return property + '-' + state.config.style['normal'];
     }
 
 

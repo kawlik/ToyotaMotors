@@ -5,33 +5,48 @@ export default function Counter( prop: {
 		valueMax: number,
 		valueNow: number,
 		position: string,
-
 	}
 }) {
 
-	//	parse data
-	const isUrgent = prop.data.valueMax - prop.data.valueNow <= 5;
-	const isStoped = prop.data.valueMax - prop.data.valueNow <= 1;
+    //  set counter stage
+    const stage = (() => {
+
+        //  test stages
+        if( prop.data.valueMax - prop.data.valueNow <= 1 ) return 'stoped';
+        if( prop.data.valueMax - prop.data.valueNow <= 5 ) return 'urgent';
+
+        //  default stage
+        return 'normal';
+        
+    })();
+
+
+    //  set counter style
+    const style = ( property: 'bg'|'border'|'text' ) => {
+
+        //  test stages
+        if( stage === 'stoped' ) return property + '-danger';
+        if( stage === 'urgent' ) return property + '-warning';
+
+        //  default style
+        return property + '-primary';
+    }
 
 
 /*	Component Layout
 /*	*	*	*	*	*	*	*	*	*	*/
 return (
 <div className={ `app-counter col-12 col-sm-6 col-md-4 col-xl-3 p-1 ` } >
-<div className={ `card shadow ${ isUrgent ? ( isStoped ? 'border-danger' : 'border-warning' )  : 'border-secondary' }` }>
+<div className={ `card shadow ${ style( 'border' ) }` }>
 
-	<h5 className={ `card-header p-1 px-2 ${ isUrgent ? 'border-warning' : 'border-dark' }` }>
-		{
-			isUrgent
-			?	<span className={ `status spinner-grow ${ isStoped ? 'text-danger' : 'text-warning' }` } role='ststus' />
-			:	<span className={ `status spinner-grow ${ isStoped ? 'text-danger' : 'text-secondary' }`} role='ststus' />
-		}
+	<h5 className={ `card-header p-1 px-2 ${ style( 'border' ) }` }>
+        <span className={ `status spinner-grow ${ style( 'text' ) }` } role='ststus' />
 		{ prop.data.position }
 	</h5>
 
 	<div className='progress' style={{ borderRadius: 0, height: 8 }}>
 		<div
-			className={ `progress-bar progress-bar-striped progress-bar-animated ${ isUrgent ? ( isStoped ? 'bg-danger' : 'bg-warning' )  : 'bg-primary' }` }
+			className={ `progress-bar progress-bar-striped progress-bar-animated ${ style( 'bg' ) }` }
 			style={{ width: `${ 100 * ( prop.data.valueNow / prop.data.valueMax ) }%` }}/>
 	</div>
 

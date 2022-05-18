@@ -1,6 +1,6 @@
-import Counter from './counter';
-
 import { useAppContext } from '../contexts/app.context';
+
+import Counter from './counter';
 
 
 /*	Component Logic
@@ -24,7 +24,7 @@ return (
 		<div className='list' >
 		{
 			state.counters
-				.filter(( counter: any ) => counter.valueMax - counter.valueNow <= 5 )
+				.filter(( counter: any ) => counter.valueMax - counter.valueNow <= state.config.valueWarn )
                 .sort(( p: any, q: any ) => p.valueMax - p.valueNow > q.valueMax - q.valueNow ? 1 : -1 )
 				.map(( counter: any ) => <Counter key={ counter.position } data={ counter } /> )
 		}		
@@ -40,7 +40,7 @@ return (
 		<div className='list' >
 		{
 			state.counters
-				.filter(( counter: any ) => counter.valueMax - counter.valueNow > 5 )
+				.filter(( counter: any ) => counter.valueMax - counter.valueNow > state.config.valueWarn )
 				.map(( counter: any ) => <Counter key={ counter.position } data={ counter } /> )
 		}		
 		</div>

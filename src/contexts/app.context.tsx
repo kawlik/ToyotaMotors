@@ -27,8 +27,8 @@ export default function AppProvider( prop: {
 		interval: 2000,
 		counters: [],
         config: {
-            valueStop: 1,
             valueWarn: 5,
+            valueStop: 1,
             style: {
                 'normal': 'primary',
                 'urgent': 'warning',

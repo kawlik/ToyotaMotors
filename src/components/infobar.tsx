@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useAppContext } from '../contexts/app.context';
 import { installPrompt } from '../services/pwa.service';
 
+import Config from './config';
+
 
 /*	Component Logic
 /*	*	*	*	*	*	*	*	*	*	*/
@@ -10,6 +12,7 @@ export default function Infobar() {
 	//	get state
 	const { state } = useAppContext();
     const [ stage, setStage ] = useState<'init'|'wait'|'done'>( 'init' );
+    const [ confi, setConfi ] = useState<boolean>( false );
 
     // 	set ready at first
 	stage === 'init' && installPrompt.then(() => setStage( 'wait' ));
@@ -36,6 +39,13 @@ return (
             .then( res => res.prompt())
             .then( res => setStage( 'done' ))
         } >Install</button>
+    }
+    
+    <button className='btn btn-secondary' onClick={ () => setConfi( true ) } >Config</button>
+
+    {
+        confi &&
+        <Config close={ () => setConfi( false ) } />
     }
 
 </header>

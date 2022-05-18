@@ -11,13 +11,15 @@ export function AppReducer( state: AppState, dispatch: {
 	//	destruct dispatch
 	const { action, payload } = dispatch;
 
+    
+
 	//	dispatch action
 	switch (action) {
 
 		case AppActions.UPDATE:
-			return payload;
+			return { ...payload };
 
 		default:
-			return state;
+			return { ...state };
 	}
 }

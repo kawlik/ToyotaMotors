@@ -16,8 +16,8 @@ export interface AppState {
 		position: string,
 	}>,
     config: {
-        valueStop: number,
         valueWarn: number,
+        valueStop: number,
         style: {
             [key: string]: 'primary'|'secondary'|'success'|'danger'|'warning'|'info'|'light'|'dark',
         }

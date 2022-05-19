@@ -24,7 +24,7 @@ export default function AppProvider( prop: {
 	//	init reducer
 	const [ state, dispatch ] = useReducer( AppReducer, {
 		isOnline: false,
-		interval: 2000,
+		interval: 1000,
 		counters: [],
         config: {
             valueWarn: 5,
@@ -37,59 +37,37 @@ export default function AppProvider( prop: {
         }
 	});
 
-    
+
 	//	chrone updates
-	useEffect(() => {
-		
-		//	init timeout guard
-		let timeout: number;
+    useEffect(() => {
 
-		//	IIFE updates chrone
-		( async function chroneUpdates() {
+        //  clear new timeout
+        const timeout = setTimeout(() => 
+            fetch( 'mock/counters.mock.json' )
+            .then( res => res.json())
+            .then( res => dispatch({
+                action: AppActions.UPDATE,
+                payload: {
+                    ...state,
+                    isOnline: true,
+                    counters: res
+                }
+            }))
+            .catch(() => dispatch({
+                action: AppActions.UPDATE,
+                payload: {
+                    ...state,
+                    isOnline: false,
+                }
+            })
+        ), state.interval );
 
-			try {
+    return () => {
 
-				//	fetch updated set
-				const data = await ( await fetch( 'mock/counters.mock.json' )).json();
+        //  clear overflown timeout
+        clearTimeout( timeout );
 
-				//	update state
-				dispatch({
-					action: AppActions.UPDATE,
-					payload: {
-						...state,
-						isOnline: true,
-						counters: data
-					},
-				});
-
-			} catch( err ) {
-
-				//	log an error
-				console.error( err );
-
-				//	update state
-				dispatch({
-					action: AppActions.UPDATE,
-					payload: {
-						...state,
-						isOnline: false,
-					},
-				});
-			}
-
-			//	set next timeout
-			timeout = setTimeout( chroneUpdates, state.interval );
-
-		} ())
-
-
-	//	clear chrone
-	return () => {
-
-		//	clear timeout
-		clearTimeout( timeout );
-		
-	}}, []);
+    }});
 
 
 /*  Component layout

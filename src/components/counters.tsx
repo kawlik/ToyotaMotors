@@ -40,7 +40,7 @@ return (
 		<div className='list' >
 		{
 			state.counters
-				.filter(( counter: any ) => counter.valueMax - counter.valueNow > state.config.valueWarn )
+				// .filter(( counter: any ) => counter.valueMax - counter.valueNow > state.config.valueWarn )
 				.map(( counter: any ) => <Counter key={ counter.position } data={ counter } /> )
 		}		
 		</div>

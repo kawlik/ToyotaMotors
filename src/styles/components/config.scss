@@ -26,4 +26,23 @@ aside.config {
         border-radius: 15px;
         max-width: 720px;
     }
+
+    .modal-footer {
+
+        gap: 10px;
+
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+
+        justify-content: space-between;
+        align-content: stretch;
+        align-items: stretch;
+
+        button {
+
+            flex-grow: 1;
+            flex-basis: 1;
+        }
+    }
 }

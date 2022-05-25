@@ -24,6 +24,7 @@ export default function Infobar() {
 return (
 <header className='app-infobar'>
 
+    <button className='btn' onClick={ () => setConfi( true ) } >⚙️</button>
 
 	<span className='logo' >TOYOTA</span>
 
@@ -35,13 +36,12 @@ return (
     
     {
         stage === 'wait' &&
-        <button className='btn btn-dark' onClick={ () => installPrompt
+        <button className='btn btn-dark ms-auto px-4' onClick={ () => installPrompt
             .then( res => res.prompt())
             .then( res => setStage( 'done' ))
         } >Install</button>
     }
     
-    <button className='btn btn-secondary' onClick={ () => setConfi( true ) } >Config</button>
 
     {
         confi &&

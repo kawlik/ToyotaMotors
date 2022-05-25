@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useReducer } from 'react';
 import { AppReducer } from './app.reducer';
 import { AppActions } from './dto';
+import useStorage from './hooks/storage';
 
 
 /*  Component Context
@@ -21,18 +22,22 @@ export default function AppProvider( prop: {
 	children: JSX.Element | JSX.Element[]
 }) {
 
+    //  init storage
+    const [ store, setStore ] = useStorage<any>();
+
+
 	//	init reducer
 	const [ state, dispatch ] = useReducer( AppReducer, {
 		isOnline: false,
 		interval: 2000,
 		counters: [],
         config: {
-            valueWarn: 5,
-            valueStop: 1,
+            valueWarn: store?.valueWarn || 5,
+            valueStop: store?.valueStop || 1,
             style: {
-                'normal': 'primary',
-                'urgent': 'warning',
-                'stoped': 'danger',
+                'normal': store?.style['normal'] || 'primary',
+                'urgent': store?.style['urgent'] || 'warning',
+                'stoped': store?.style['stoped'] || 'danger',
             }
         }
 	});
@@ -96,7 +101,7 @@ export default function AppProvider( prop: {
 /*   *   *   *   *   *   *   *   *   *   */
 return(
     <AppContext.Provider value={{
-		state, dispatch
+		state, dispatch, setStore
 	}} >
 
 	{ prop.children }

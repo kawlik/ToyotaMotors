@@ -55,7 +55,21 @@ export default function AppProvider( prop: {
 			try {
 
 				//	fetch updated set
-				const data = await ( await fetch( 'mock/counters.mock.json' )).json();
+				const data: {
+                    MachiningAndon: Array<{
+                        valueMax: number,
+                        valueNow: number,
+                        Strefa: number,
+                        NrMaszyny: string,
+                        TypLinii: string,
+                        NrStacji: string,
+                        Linia: string,
+                        Model: string
+                    }>
+                } = await ( await fetch( 'mock/counters.mock.json' )).json();
+
+                //  parse data
+
 
 				//	update state
 				dispatch({
@@ -63,7 +77,11 @@ export default function AppProvider( prop: {
 					payload: {
 						...state,
 						isOnline: true,
-						counters: data
+						counters: data.MachiningAndon.map( counter => ({
+                            valueMax: counter.valueMax,
+                            valueNow: counter.valueNow,
+                            position: `${ counter.TypLinii } ${ counter.Linia } ${ counter.NrStacji }`,
+                        }))
 					},
 				});
 

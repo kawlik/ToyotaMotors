@@ -10,7 +10,7 @@ export default function Config( prop: {
 }) {
 
     //  get context state
-    const { state, dispatch } = useAppContext();
+    const { state, dispatch, setStore } = useAppContext();
 
     //  create local state
     const [ valueWarn, setValueWarn ] = useState( state.config.valueWarn );
@@ -92,7 +92,34 @@ return (
     </div>
 
     <div className='modal-footer border-top-0' >
-        <button className='btn btn-lg btn-outline-primary w-100' onClick={ e => {
+
+        <button className='btn btn-lg btn-outline-warning' onClick={ e => {
+            e.preventDefault();
+
+            //  dispatch new state
+            dispatch({ action: AppActions.UPDATE, payload: {
+                    ...state,
+                    config: {
+                        valueWarn: 5,
+                        valueStop: 1,
+                        style: {
+                            'normal': 'primary',
+                            'urgent': 'warning',
+                            'stoped': 'danger',
+                        }
+                    }
+                }
+            });
+
+            //  save to local storage
+            setStore( null );
+
+            //  close modal
+            prop.close();
+            
+        }} >Clear</button>
+
+        <button className='btn btn-lg btn-outline-primary' onClick={ e => {
             e.preventDefault();
 
             //  dispatch new state
@@ -110,10 +137,22 @@ return (
                 }
             });
 
+            //  save to local storage
+            setStore({
+                valueWarn: valueWarn,
+                valueStop: valueStop,
+                style: {
+                    'normal': normal,
+                    'urgent': urgent,
+                    'stoped': stoped,
+                }
+            });
+
             //  close modal
             prop.close();
 
         }} >Save</button>
+
     </div>
 
 </div>

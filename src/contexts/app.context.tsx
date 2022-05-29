@@ -66,10 +66,7 @@ export default function AppProvider( prop: {
                         Linia: string,
                         Model: string
                     }>
-                } = await ( await fetch( 'mock/counters.mock.json' )).json();
-
-                //  parse data
-
+                } = await ( await fetch( window.location.search.includes( 'debug' ) ? 'mock/counters.mock.json' : 'plwalmfiapp50:8081/api/TMMP-J/AndonMachining/machining' )).json();
 
 				//	update state
 				dispatch({
@@ -80,7 +77,7 @@ export default function AppProvider( prop: {
 						counters: data.MachiningAndon.map( counter => ({
                             valueMax: counter.valueMax,
                             valueNow: counter.valueNow,
-                            position: `${ counter.TypLinii } ${ counter.Linia } ${ counter.NrStacji }`,
+                            position: `${ counter.TypLinii } ${ counter.Linia } ${ counter.NrStacji } ${ counter.Model } ${ counter.NrMaszyny }`,
                         }))
 					},
 				});

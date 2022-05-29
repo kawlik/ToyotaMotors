@@ -42,7 +42,7 @@ export default function Counter( prop: {
 /*	Component Layout
 /*	*	*	*	*	*	*	*	*	*	*/
 return (
-<div className={ `app-counter col-12 col-sm-6 col-md-4 col-xl-3 p-1 ` } >
+<div className={ `app-counter col-12 col-xl-6 p-1 ` } >
 <div className={ `card shadow ${ style( 'border' ) }` }>
 
 	<h5 className={ `card-header p-1 px-2 ${ style( 'border' ) }` }>

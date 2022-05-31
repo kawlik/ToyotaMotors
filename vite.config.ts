@@ -10,7 +10,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig({
 
 	//  base url path
-	base: '/toyota/',
+	// base: '/toyota/',
 
 	//  used plugins
 	plugins: [

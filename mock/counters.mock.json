@@ -1,44 +1,364 @@
 {
     "MachiningAndon": [
-        {
-            "valueMax": 50,
-            "valueNow": 0,
-            "NrMaszyny": "HMZY0108",
-            "Linia": "Block",
-            "TypLinii": "MIX",
-            "NrStacji": "QC1",
-            "Strefa": 1,
-            "Model": "2.0L A"
-        },
-        {
-            "valueMax": 50,
-            "valueNow": 0,
-            "NrMaszyny": "HMZY0108",
-            "Linia": "Block",
-            "TypLinii": "MIX",
-            "NrStacji": "QC1",
-            "Strefa": 1,
-            "Model": "1.5L A"
-        },
-        {
-            "valueMax": 50,
-            "valueNow": 0,
-            "NrMaszyny": "HMZY0109",
-            "Linia": "Block",
-            "TypLinii": "MIX",
-            "NrStacji": "QC1",
-            "Strefa": 1,
-            "Model": "2.0L A"
-        },
-        {
-            "valueMax": 50,
-            "valueNow": 0,
-            "NrMaszyny": "HMZY0109",
-            "Linia": "Block",
-            "TypLinii": "MIX",
-            "NrStacji": "QC1",
-            "Strefa": 1,
-            "Model": "1.5L A"
-        }
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMZY0108",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC1",
+        "Strefa": 1,
+        "Model": "2.0L A"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMZY0108",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC1",
+        "Strefa": 1,
+        "Model": "1.5L A"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMZY0109",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC1",
+        "Strefa": 1,
+        "Model": "2.0L A"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMZY0109",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC1",
+        "Strefa": 1,
+        "Model": "1.5L A"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMZY0110",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC1",
+        "Strefa": 1,
+        "Model": "Model 2.0L B"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMZY0110",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC1",
+        "Strefa": 1,
+        "Model": "Model 1.5L B"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMZY0111",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC1",
+        "Strefa": 1,
+        "Model": "Model 2.0L B"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMZY0111",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC1",
+        "Strefa": 1,
+        "Model": "Model 1.5L B"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0057-6",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC2",
+        "Strefa": 1,
+        "Model": "Model 2.0L A"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0057-6",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC2",
+        "Strefa": 1,
+        "Model": "Model 2.0L B"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0057-6",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC2",
+        "Strefa": 1,
+        "Model": "Model 1.5L A"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0057-6",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC2",
+        "Strefa": 1,
+        "Model": "Model 1.5L B"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0057-8-1",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC3",
+        "Strefa": 1,
+        "Model": "Model 2.0L"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0057-8-1",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC3",
+        "Strefa": 1,
+        "Model": "Model 1.5L"
+      },
+      {
+        "valueMax": 0,
+        "valueNow": 50,
+        "NrMaszyny": "HMCK0057-11",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC4",
+        "Strefa": 3,
+        "Model": "Model 2.0L A"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0057-11",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC4",
+        "Strefa": 3,
+        "Model": "Model 2.0L B"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0057-11",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC4",
+        "Strefa": 3,
+        "Model": "Model 1.5L A"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0057-11",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC4",
+        "Strefa": 3,
+        "Model": "Model 1.5L B"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0057-13",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC5",
+        "Strefa": 3,
+        "Model": "Model 2.0L"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0057-13",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC5",
+        "Strefa": 3,
+        "Model": "Model 1.5L"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0057-14",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC6",
+        "Strefa": 3,
+        "Model": "Model 2.0L"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0057-14",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC6",
+        "Strefa": 3,
+        "Model": "Model 1.5L"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0057-17",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC7",
+        "Strefa": 3,
+        "Model": "Model 2.0L"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0057-17",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC7",
+        "Strefa": 3,
+        "Model": "Model 1.5L MIX"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0057-17",
+        "Linia": "Block",
+        "TypLinii": "MIX",
+        "NrStacji": "QC7",
+        "Strefa": 3,
+        "Model": "Model 1.5L #2"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMZY0204",
+        "Linia": "Block",
+        "TypLinii": "1.5L",
+        "NrStacji": "QC1",
+        "Strefa": 2,
+        "Model": "Model 1.5L A"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMZY0205",
+        "Linia": "Block",
+        "TypLinii": "1.5L",
+        "NrStacji": "QC1",
+        "Strefa": 2,
+        "Model": "Model 1.5L A"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMZY0202",
+        "Linia": "Block",
+        "TypLinii": "1.5L",
+        "NrStacji": "QC1",
+        "Strefa": 2,
+        "Model": "Model 1.5L B"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMZY0203",
+        "Linia": "Block",
+        "TypLinii": "1.5L",
+        "NrStacji": "QC1",
+        "Strefa": 2,
+        "Model": "Model 1.5L B"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0084-6",
+        "Linia": "Block",
+        "TypLinii": "1.5L",
+        "NrStacji": "QC2",
+        "Strefa": 2,
+        "Model": "Model 1.5L A"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0084-6",
+        "Linia": "Block",
+        "TypLinii": "1.5L",
+        "NrStacji": "QC2",
+        "Strefa": 2,
+        "Model": "Model 1.5L B"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0084-8-1",
+        "Linia": "Block",
+        "TypLinii": "1.5L",
+        "NrStacji": "QC3",
+        "Strefa": 2,
+        "Model": "Model 1.5L "
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0084-11",
+        "Linia": "Block",
+        "TypLinii": "1.5L",
+        "NrStacji": "QC4",
+        "Strefa": 3,
+        "Model": "Model 1.5L A"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0084-11",
+        "Linia": "Block",
+        "TypLinii": "1.5L",
+        "NrStacji": "QC4",
+        "Strefa": 3,
+        "Model": "Model 1.5L B"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0084-13",
+        "Linia": "Block",
+        "TypLinii": "1.5L",
+        "NrStacji": "QC5",
+        "Strefa": 3,
+        "Model": "Model 1.5L"
+      },
+      {
+        "valueMax": 50,
+        "valueNow": 0,
+        "NrMaszyny": "HMCK0084-14",
+        "Linia": "Block",
+        "TypLinii": "1.5L",
+        "NrStacji": "QC6",
+        "Strefa": 3,
+        "Model": "Model 1.5L"
+      }
     ]
-}
+  }

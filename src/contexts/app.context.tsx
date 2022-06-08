@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { createContext, useContext, useEffect, useReducer } from 'react';
 import { AppReducer } from './app.reducer';
 import { AppActions } from './dto';
@@ -66,7 +67,7 @@ export default function AppProvider( prop: {
                         Linia: string,
                         Model: string
                     }>
-                } = await ( await fetch( window.location.search.includes( 'debug' ) ? 'mock/counters.mock.json' : 'plwalmfiapp50:8081/api/TMMP-J/AndonMachining/machining' )).json();
+                } = ( await axios.get( window.location.search.includes( 'debug' ) ? 'mock/counters.mock.json' : 'http://10.115.2.16:8081/api/TMMP-J/AndonMachining/machining' )).data;
 
 				//	update state
 				dispatch({

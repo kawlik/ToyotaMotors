@@ -3,11 +3,11 @@ import { useState } from 'react';
 
 /*  Define hook
 /*   *   *   *   *   *   *   *   *   *   */
-export default function useStorage<T>() {
+export default function useStorage<T>( data?: T ) {
 
     const localStorageKey = 'app.config';
 
-    const [ value, setValue ] = useState<T>( JSON.parse( localStorage.getItem( localStorageKey )! ) || null );
+    const [ value, setValue ] = useState<T>( JSON.parse( localStorage.getItem( localStorageKey )! ) || data );
 
     return [ value, ( data: T ) => {
 

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { createContext, useContext, useEffect, useReducer } from 'react';
 import { AppReducer } from './app.reducer';
-import { AppActions } from './dto';
+import { AppActions, AppStore } from './dto';
 import useStorage from './hooks/storage';
 
 
@@ -24,23 +24,22 @@ export default function AppProvider( prop: {
 }) {
 
     //  init storage
-    const [ store, setStore ] = useStorage<any>();
+    const [ store, dispatchStore ] = useStorage<AppStore>({
+        valueWarn: 5,
+        valueStop: 1,
+        style: {
+            'normal': 'primary',
+            'urgent': 'warning',
+            'stoped': 'danger',
+        }
+    });
 
 
 	//	init reducer
-	const [ state, dispatch ] = useReducer( AppReducer, {
+	const [ state, dispatchState ] = useReducer( AppReducer, {
 		isOnline: false,
 		interval: 2000,
 		counters: [],
-        config: {
-            valueWarn: store?.valueWarn || 5,
-            valueStop: store?.valueStop || 1,
-            style: {
-                'normal': store?.style['normal'] || 'primary',
-                'urgent': store?.style['urgent'] || 'warning',
-                'stoped': store?.style['stoped'] || 'danger',
-            }
-        }
 	});
 
     
@@ -70,7 +69,7 @@ export default function AppProvider( prop: {
                 } = ( await axios.get( window.location.search.includes( 'debug' ) ? 'http://10.115.2.16:8081/api/TMMP-J/AndonMachining/machining' : 'mock/counters.mock.json' )).data;
 
 				//	update state
-				dispatch({
+				dispatchState({
 					action: AppActions.UPDATE,
 					payload: {
 						...state,
@@ -79,7 +78,7 @@ export default function AppProvider( prop: {
                             valueMax: counter.valueMax,
                             valueNow: counter.valueNow,
                             position: `${ counter.TypLinii } ${ counter.Linia } ${ counter.NrStacji } ${ counter.Model } ${ counter.NrMaszyny }`,
-                        }))
+                        })),
 					},
 				});
 
@@ -89,7 +88,7 @@ export default function AppProvider( prop: {
 				console.error( err );
 
 				//	update state
-				dispatch({
+				dispatchState({
 					action: AppActions.UPDATE,
 					payload: {
 						...state,
@@ -117,7 +116,8 @@ export default function AppProvider( prop: {
 /*   *   *   *   *   *   *   *   *   *   */
 return(
     <AppContext.Provider value={{
-		state, dispatch, setStore
+		state, dispatchState,
+        store, dispatchStore,
 	}} >
 
 	{ prop.children }

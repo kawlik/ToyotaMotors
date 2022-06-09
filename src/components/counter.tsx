@@ -12,14 +12,14 @@ export default function Counter( prop: {
 }) {
 
     //  get context state
-    const { state } = useAppContext();
+    const { store } = useAppContext();
 
     //  set counter stage
     const stage = (() => {
 
         //  test stages
-        if( prop.data.valueMax - prop.data.valueNow <= state.config.valueStop ) return 'stoped';
-        if( prop.data.valueMax - prop.data.valueNow <= state.config.valueWarn ) return 'urgent';
+        if( prop.data.valueMax - prop.data.valueNow <= store.valueStop ) return 'stoped';
+        if( prop.data.valueMax - prop.data.valueNow <= store.valueWarn ) return 'urgent';
 
         //  default stage
         return 'normal';
@@ -31,11 +31,11 @@ export default function Counter( prop: {
     const style = ( property: 'bg'|'border'|'text' ) => {
 
         //  test stages
-        if( stage === 'stoped' ) return property + '-' + state.config.style['stoped'];
-        if( stage === 'urgent' ) return property + '-' + state.config.style['urgent'];
+        if( stage === 'stoped' ) return property + '-' + store.style['stoped'];
+        if( stage === 'urgent' ) return property + '-' + store.style['urgent'];
 
         //  default style
-        return property + '-' + state.config.style['normal'];
+        return property + '-' + store.style['normal'];
     }
 
 

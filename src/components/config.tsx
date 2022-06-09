@@ -10,14 +10,14 @@ export default function Config( prop: {
 }) {
 
     //  get context state
-    const { state, dispatch, setStore } = useAppContext();
+    const { store, dispatchStore } = useAppContext();
 
     //  create local state
-    const [ valueWarn, setValueWarn ] = useState( state.config.valueWarn );
-    const [ valueStop, setValueStop ] = useState( state.config.valueStop );
-    const [ normal, setNormal ] = useState( state.config.style['normal'] );
-    const [ urgent, setUrgent ] = useState( state.config.style['urgent'] );
-    const [ stoped, setStoped ] = useState( state.config.style['stoped'] );
+    const [ valueWarn, setValueWarn ] = useState( store.valueWarn );
+    const [ valueStop, setValueStop ] = useState( store.valueStop );
+    const [ normal, setNormal ] = useState( store.style['normal'] );
+    const [ urgent, setUrgent ] = useState( store.style['urgent'] );
+    const [ stoped, setStoped ] = useState( store.style['stoped'] );
 
 
 /*	Component Layout
@@ -96,23 +96,16 @@ return (
         <button className='btn btn-lg btn-outline-warning' onClick={ e => {
             e.preventDefault();
 
-            //  dispatch new state
-            dispatch({ action: AppActions.UPDATE, payload: {
-                    ...state,
-                    config: {
-                        valueWarn: 5,
-                        valueStop: 1,
-                        style: {
-                            'normal': 'primary',
-                            'urgent': 'warning',
-                            'stoped': 'danger',
-                        }
-                    }
+            //  save to local storage
+            dispatchStore({
+                valueWarn: 5,
+                valueStop: 1,
+                style: {
+                    'normal': 'primary',
+                    'urgent': 'warning',
+                    'stoped': 'danger',
                 }
             });
-
-            //  save to local storage
-            setStore( null );
 
             //  close modal
             prop.close();
@@ -122,23 +115,8 @@ return (
         <button className='btn btn-lg btn-outline-primary' onClick={ e => {
             e.preventDefault();
 
-            //  dispatch new state
-            dispatch({ action: AppActions.UPDATE, payload: {
-                    ...state,
-                    config: {
-                        valueWarn: valueWarn,
-                        valueStop: valueStop,
-                        style: {
-                            'normal': normal,
-                            'urgent': urgent,
-                            'stoped': stoped,
-                        }
-                    }
-                }
-            });
-
             //  save to local storage
-            setStore({
+            dispatchStore({
                 valueWarn: valueWarn,
                 valueStop: valueStop,
                 style: {

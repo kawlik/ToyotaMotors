@@ -15,11 +15,12 @@ export interface AppState {
 		valueNow: number,
 		position: string,
 	}>,
-    config: {
-        valueWarn: number,
-        valueStop: number,
-        style: {
-            [key: string]: 'primary'|'secondary'|'success'|'danger'|'warning'|'info'|'light'|'dark',
-        }
+}
+
+export interface AppStore {
+    valueWarn: number,
+    valueStop: number,
+    style: {
+        [key: string]: 'primary'|'secondary'|'success'|'danger'|'warning'|'info'|'light'|'dark',
     }
 }

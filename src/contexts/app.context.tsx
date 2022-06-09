@@ -67,7 +67,7 @@ export default function AppProvider( prop: {
                         Linia: string,
                         Model: string
                     }>
-                } = ( await axios.get( window.location.search.includes( 'debug' ) ? 'mock/counters.mock.json' : 'http://10.115.2.16:8081/api/TMMP-J/AndonMachining/machining' )).data;
+                } = ( await axios.get( window.location.search.includes( 'debug' ) ? 'http://10.115.2.16:8081/api/TMMP-J/AndonMachining/machining' : 'mock/counters.mock.json' )).data;
 
 				//	update state
 				dispatch({

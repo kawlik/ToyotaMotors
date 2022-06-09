@@ -2,7 +2,7 @@
     "MachiningAndon": [
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 34,
         "NrMaszyny": "HMZY0108",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -12,7 +12,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 8,
         "NrMaszyny": "HMZY0108",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -22,7 +22,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 10,
         "NrMaszyny": "HMZY0109",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -32,7 +32,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 19,
         "NrMaszyny": "HMZY0109",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -42,7 +42,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 31,
         "NrMaszyny": "HMZY0110",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -62,7 +62,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 20,
         "NrMaszyny": "HMZY0111",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -72,7 +72,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 11,
         "NrMaszyny": "HMZY0111",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -82,7 +82,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 10,
         "NrMaszyny": "HMCK0057-6",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -92,7 +92,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 44,
         "NrMaszyny": "HMCK0057-6",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -102,7 +102,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 15,
         "NrMaszyny": "HMCK0057-6",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -112,7 +112,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 22,
         "NrMaszyny": "HMCK0057-6",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -122,7 +122,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 20,
         "NrMaszyny": "HMCK0057-8-1",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -132,7 +132,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 10,
         "NrMaszyny": "HMCK0057-8-1",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -141,7 +141,7 @@
         "Model": "Model 1.5L"
       },
       {
-        "valueMax": 0,
+        "valueMax": 50,
         "valueNow": 50,
         "NrMaszyny": "HMCK0057-11",
         "Linia": "Block",
@@ -152,7 +152,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 12,
         "NrMaszyny": "HMCK0057-11",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -162,7 +162,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 45,
         "NrMaszyny": "HMCK0057-11",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -172,7 +172,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 43,
         "NrMaszyny": "HMCK0057-11",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -182,7 +182,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 17,
         "NrMaszyny": "HMCK0057-13",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -192,7 +192,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 33,
         "NrMaszyny": "HMCK0057-13",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -202,7 +202,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 30,
         "NrMaszyny": "HMCK0057-14",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -212,7 +212,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 29,
         "NrMaszyny": "HMCK0057-14",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -222,7 +222,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 9,
         "NrMaszyny": "HMCK0057-17",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -232,7 +232,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 24,
         "NrMaszyny": "HMCK0057-17",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -242,7 +242,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 47,
         "NrMaszyny": "HMCK0057-17",
         "Linia": "Block",
         "TypLinii": "MIX",
@@ -252,7 +252,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 11,
         "NrMaszyny": "HMZY0204",
         "Linia": "Block",
         "TypLinii": "1.5L",
@@ -262,7 +262,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 43,
         "NrMaszyny": "HMZY0205",
         "Linia": "Block",
         "TypLinii": "1.5L",
@@ -272,7 +272,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 20,
         "NrMaszyny": "HMZY0202",
         "Linia": "Block",
         "TypLinii": "1.5L",
@@ -282,7 +282,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 10,
         "NrMaszyny": "HMZY0203",
         "Linia": "Block",
         "TypLinii": "1.5L",
@@ -292,7 +292,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 37,
         "NrMaszyny": "HMCK0084-6",
         "Linia": "Block",
         "TypLinii": "1.5L",
@@ -302,7 +302,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 11,
         "NrMaszyny": "HMCK0084-6",
         "Linia": "Block",
         "TypLinii": "1.5L",
@@ -312,7 +312,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 39,
         "NrMaszyny": "HMCK0084-8-1",
         "Linia": "Block",
         "TypLinii": "1.5L",
@@ -322,7 +322,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 32,
         "NrMaszyny": "HMCK0084-11",
         "Linia": "Block",
         "TypLinii": "1.5L",
@@ -332,7 +332,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 21,
         "NrMaszyny": "HMCK0084-11",
         "Linia": "Block",
         "TypLinii": "1.5L",
@@ -342,7 +342,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 28,
         "NrMaszyny": "HMCK0084-13",
         "Linia": "Block",
         "TypLinii": "1.5L",
@@ -352,7 +352,7 @@
       },
       {
         "valueMax": 50,
-        "valueNow": 0,
+        "valueNow": 40,
         "NrMaszyny": "HMCK0084-14",
         "Linia": "Block",
         "TypLinii": "1.5L",
